@@ -1,36 +1,48 @@
 import os
 from dotenv import load_dotenv
-import psycopg2
-from psycopg2.extras import RealDictCursor
+import snowflake.connector
 
-# Load variables from .env at project root
+# Load environment variables from .env
 load_dotenv()
 
 def get_db_connection():
     """
-    Establish a connection to the Postgres database using credentials from .env.
+    Creates and returns a Snowflake database connection using credentials
+    stored in the .env file.
     """
-    conn = psycopg2.connect(
-        host=os.getenv("DB_HOST"),
-        port=os.getenv("DB_PORT"),
-        dbname=os.getenv("DB_NAME"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
+    conn = snowflake.connector.connect(
+        account=os.getenv("SNOWFLAKE_ACCOUNT"),
+        user=os.getenv("SNOWFLAKE_USER"),
+        password=os.getenv("SNOWFLAKE_PASSWORD"),
+        role=os.getenv("SNOWFLAKE_ROLE"),
+        warehouse=os.getenv("SNOWFLAKE_WAREHOUSE"),
+        database=os.getenv("SNOWFLAKE_DATABASE"),
+        schema=os.getenv("SNOWFLAKE_SCHEMA")
     )
     return conn
 
+
 def test_connection():
     """
-    Run a simple SELECT 1 query to verify the database connection works.
+    Tests the Snowflake connection by running a simple query.
     """
     conn = get_db_connection()
     try:
-        with conn.cursor(cursor_factory=RealDictCursor) as cur:
-            cur.execute("SELECT 1;")
-            result = cur.fetchone()
-            print("DB connection OK:", result)
+        cur = conn.cursor()
+        cur.execute(
+            "SELECT CURRENT_USER(), CURRENT_ROLE(), CURRENT_WAREHOUSE(), CURRENT_DATABASE(), CURRENT_SCHEMA();"
+        )
+        row = cur.fetchone()
+        print("SNOWFLAKE CONNECTION SUCCESSFUL:")
+        print("  USER:", row[0])
+        print("  ROLE:", row[1])
+        print("  WAREHOUSE:", row[2])
+        print("  DATABASE:", row[3])
+        print("  SCHEMA:", row[4])
     finally:
+        cur.close()
         conn.close()
+
 
 if __name__ == "__main__":
     test_connection()

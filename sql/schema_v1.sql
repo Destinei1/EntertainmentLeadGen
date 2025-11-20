@@ -1,7 +1,3 @@
-CREATE DATABASE IF NOT EXISTS ENTERTAINMENT_LEAD_GEN;
-
-CREATE SCHEMA IF NOT EXISTS ENTERTAINMENT_LEAD_GEN.PUBLIC;
-
 -- ========================================
 -- RAW_CONTACTS (staging table)
 -- ========================================
