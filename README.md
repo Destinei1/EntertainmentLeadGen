@@ -35,7 +35,7 @@ Built with a data-engineering-first approach, this project emphasizes
 ---
 
 ## 🚧 Project Roadmap
-### **Phase 1 — Foundation (Current Phase)**
+### **Phase 1 — Foundation**
 - Set up repo & environment  
 - Initialize database schema  
 - Build `raw_contacts`, `contacts`, `organizations` tables  
@@ -46,15 +46,14 @@ Built with a data-engineering-first approach, this project emphasizes
 - Standardize raw → cleaned transformations  
 - Create organization matching + dedupe logic  
 
-### **Phase 3 — Airflow Orchestration**
+### **Phase 3 — Airflow Orchestration  (Current Phase)**
 - Schedule daily/weekly scraping  
 - Error-handling, retries, logging  
 - Automated exports  
 
-### **Phase 4 — Application Layer (Optional)**
-- FastAPI or Flask UI for segment browsing  
-- Email provider integration (SendGrid/Mailgun)  
-- Campaign management dashboard  
+### **Phase 4 — Bespoke Scrapers**
+- Site-specific webscrapers using BeautifulSoup
+- LLM powered scrapers layered in  
 
 ---
 
