@@ -26,12 +26,12 @@ Built with a data-engineering-first approach, this project emphasizes
 
 ## 🔧 Tech Stack (Phase 1)
 - **Python** (Scrapers, ETL, utilities)  
-- **PostgreSQL** (Database foundation)  
-- **psycopg2** (DB driver)  
-- **dotenv** (Environment management)  
+- **Snowflake** (Database foundation)  
+- **snowflake-connector-python** (DB connectivity)  
+- **python-dotenv** (Secure environment management)  
 - **VS Code** (Primary dev environment)  
 - **Git/GitHub** (Version control & documentation)
-
+- **xxFUTURE ADDxx VS requests, BeautifulSoup4, lxml** (web scraping toolkit)  
 ---
 
 ## 🚧 Project Roadmap
