@@ -72,5 +72,5 @@ Your idea sparked a full data-engineering ecosystem — thank you for trusting m
 
 ## 📬 Contact  
 *Maintained and developed by Destinei (Neon).*  
-Future updates will include a public demo and documentation for adding new sources.
+Destsimp@gmail.com for any further inquiries
 
