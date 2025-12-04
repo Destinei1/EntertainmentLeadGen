@@ -20,7 +20,7 @@ The final system will allow an entertainment entity to:
 5. Optionally send mass communications through a custom-built interface  
 
 Built with a data-engineering-first approach, this project emphasizes  
-**scalability, automation, transparency, and easy future expansion.**
+**scalability, automation, transparency, AI usage and easy future expansion.**
 
 ---
 
@@ -31,7 +31,8 @@ Built with a data-engineering-first approach, this project emphasizes
 - **python-dotenv** (Secure environment management)  
 - **VS Code** (Primary dev environment)  
 - **Git/GitHub** (Version control & documentation)
-- **xxFUTURE ADDxx VS requests, BeautifulSoup4, lxml** (web scraping toolkit)  
+- **Firecrawl** (web scraping AI)  
+- **Airflow** (Data Pipeline Orchestration)  
 ---
 
 ## 🚧 Project Roadmap
@@ -46,14 +47,13 @@ Built with a data-engineering-first approach, this project emphasizes
 - Standardize raw → cleaned transformations  
 - Create organization matching + dedupe logic  
 
-### **Phase 3 — Airflow Orchestration  (Current Phase)**
+### **Phase 3 — Bespoke AI Scrapers (Current Phase)**
+- AI scraper that allows natural language questions to scrape an entire domain
+
+### **Phase 4 — Airflow Orchestration**
 - Schedule daily/weekly scraping  
 - Error-handling, retries, logging  
 - Automated exports  
-
-### **Phase 4 — Bespoke Scrapers**
-- Site-specific webscrapers using BeautifulSoup
-- LLM powered scrapers layered in  
 
 ---
 
