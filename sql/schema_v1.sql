@@ -44,4 +44,30 @@ CREATE TABLE IF NOT EXISTS ORGANIZATIONS (
     CITY STRING
 );
 
+-- ========================================
+-- RAW_CONTACTS_AI_STAGING (AI extraction sandbox)
+-- ========================================
+CREATE TABLE IF NOT EXISTS RAW_CONTACTS_AI_STAGING (
+    STAGING_ID INT AUTOINCREMENT PRIMARY KEY,
 
+    -- Core contact fields
+    FULL_NAME STRING,
+    EMAIL STRING,
+    PHONE STRING,
+    ORG_NAME STRING,
+    ORG_TYPE STRING,
+    ROLE_TITLE STRING,
+    LOCATION_CITY STRING,
+    LOCATION_COUNTRY STRING,
+    SOURCE STRING,
+    RAW_URL STRING,
+    SCRAPED_AT TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP(),
+
+    -- AI / quality control fields
+    IS_SUSPECT BOOLEAN DEFAULT FALSE,
+    SUSPECT_REASON STRING,
+    LLM_SOURCE STRING,          -- e.g. 'firecrawl_vX'
+
+    -- Optional: raw AI payload for audit/debugging
+    RAW_JSON VARIANT
+);
