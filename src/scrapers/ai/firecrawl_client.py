@@ -2,12 +2,12 @@ import os
 from typing import List, Dict, Any
 
 from dotenv import load_dotenv
-from firecrawl import FirecrawlApp
+from firecrawl import Firecrawl
 
 load_dotenv()
 
 
-def get_firecrawl_client() -> FirecrawlApp:
+def get_firecrawl_client() -> Firecrawl:
     """
     Initialize and return a Firecrawl client using the API key
     from the environment.
@@ -16,7 +16,7 @@ def get_firecrawl_client() -> FirecrawlApp:
     if not api_key:
         raise RuntimeError("FIRECRAWL_API_KEY is not set in the environment/.env")
 
-    return FirecrawlApp(api_key=api_key)
+    return Firecrawl(api_key=api_key)
 
 
 def crawl_domain_and_extract_contacts(
