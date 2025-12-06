@@ -2,8 +2,8 @@ import re
 import json
 from typing import List, Dict, Any
 
-from src.scrapers.ai.firecrawl_client import crawl_domain_and_extract_contacts
-from src.db.connection import get_db_connection
+from scrapers.ai.firecrawl_client import crawl_domain_and_extract_contacts
+from db.connection import get_db_connection
 
 
 GENERIC_PREFIXES = ("info@", "contact@", "support@", "no-reply@", "noreply@")
