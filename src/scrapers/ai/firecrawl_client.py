@@ -15,7 +15,6 @@ def get_firecrawl_client() -> Firecrawl:
     api_key = os.getenv("FIRECRAWL_API_KEY")
     if not api_key:
         raise RuntimeError("FIRECRAWL_API_KEY is not set in the environment/.env")
-
     return Firecrawl(api_key=api_key)
 
 
@@ -59,7 +58,7 @@ def crawl_domain_and_extract_contacts(
         "properties": {
             "contacts": {
                 "type": "array",
-                "items": contact_item_schema,
+                "items": contact_schema,
             }
         },
         "required": ["contacts"],
@@ -78,7 +77,7 @@ def crawl_domain_and_extract_contacts(
     # - max_pages controls crawl depth/size
     # - We ask Firecrawl to return data that matches our contact_schema
     result = client.extract(
-        url=urls,
+        urls=urls,
         prompt=prompt,
         schema=schema
         # limit=max_pages,

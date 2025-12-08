@@ -157,5 +157,5 @@ def run_firecrawl_ai_ingest(domain_url: str, max_pages: int = 5) -> None:
 
 if __name__ == "__main__":
     # For now, hardcode a test domain or leave as a placeholder.
-    TEST_DOMAIN = "https://example.com"
+    TEST_DOMAIN = "https://www.ccny.cuny.edu/activities/student-media"
     run_firecrawl_ai_ingest(TEST_DOMAIN, max_pages=3)
