@@ -29,3 +29,4 @@ def run_schema():
 
 if __name__ == "__main__":
     run_schema()
+# this doesnt need to be ran multiple times, we only need to create the data model once

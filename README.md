@@ -66,8 +66,8 @@ and smarter outreach.
 ---
 
 ## 🙏 Special Thanks  
-A very special thanks to Rahshon, whose vision, creativity, and passion for building meaningful community inspired this project.  
-Your idea sparked a full data-engineering ecosystem — thank you for trusting me to bring it to life.
+A very special thanks to my friends in music, whose vision, creativity, and passion for building meaningful community inspired this project.  
+Your idea sparked a full data-engineering ecosystem — thank you for trusting me to bring this to life.
 ---
 
 ## 📬 Contact  
