@@ -1,0 +1,35 @@
+==================== 2026-01-07T15:35:08.511103Z | 019b9918-f5c4-7892-abd1-8f2770eda094 ====================
+15:35:08.515276 [info ]: Installing dbt project and profile setup
+15:35:08.551012 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+15:35:08.553650 [info ]: Success Project created successfully!
+15:35:08.553874 [info ]: Info Project name: jaffle_shop
+15:35:08.554265 [info ]: Info Project directory: jaffle_shop
+15:35:08.554641 [info ]: Info Setting up your profile...
+15:35:08.565697 [info ]: Info Creating new profile...
+15:35:32.423844 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+15:35:51.336888 [info ]: Success Profile written to C:\Users\neonn\.dbt\profiles.yml
+15:35:51.338439 [info ]: Validating profile inputs, adapters, and connection
+
+15:35:51.338660 [info ]: dbt-fusion 2.0.0-preview.92
+15:35:51.344121 [info ]: Started loading project
+15:35:51.386152 [info ]: Loading ~/.dbt/profiles.yml
+15:35:51.422629 [info ]: Finished loading project [  0.08s]
+15:35:51.426467 [info ]: Started debugging
+15:35:51.426901 [info ]: Debugging profile: dev
+15:35:51.427174 [info ]: Debugging dbt version: 2.0.0-preview.92
+15:35:51.427669 [info ]: Debugging platform: windows x86_64 (windows)
+15:35:51.428271 [info ]: Debugging adapter type: snowflake (remote)
+15:35:51.473516 [info ]: Debugging dependencies:
+  git: OK
+15:35:51.477901 [info ]: Debugging connection:
+  "account": "exit",
+  "user": "exit",
+  "database": "exit",
+  "warehouse": "exit",
+  "schema": "exit",
+  "role": "exit"
+15:35:53.599584 [info ]: Finished debugging [  2.17s]
+15:35:53.600500 [error]: dbt1011: [Snowflake] 261004 (08004): failed to auth for unknown reason. HTTP: 404, URL: https://exit.snowflakecomputing.com:443/session/v1/login-request?databaseName=exit&requestId=a2a3406d-afcf-43b7-6619-d958370e6267&request_guid=10b4dbeb-096c-4e9e-6d30-8eb6d9871dff&roleName=exit&schemaName=exit&warehouse=exit
+15:35:53.742901 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [45.2s]
